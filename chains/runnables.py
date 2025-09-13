@@ -1,6 +1,6 @@
 from langchain_ollama import OllamaLLM
 from langchain_core.prompts import PromptTemplate
-from langchain_core.output_parsers import StrOutputParser
+
 
 llm=OllamaLLM(model="gemma:2b",base_url="http://localhost:11434",temperature=0,streaming=False)
 
@@ -12,4 +12,4 @@ questions=[{"question":"In which country is Nvidia's world headquater?"},
            {"question":"When was Nvidia founded?"},
            {"question":"Who is the CEO of Nvidia?"}]
 prompts=template.batch(questions)
-print(prompts)
+print((prompts))
